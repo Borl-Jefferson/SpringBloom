@@ -20,7 +20,7 @@ import processing.core.PApplet;
 public class FlowerBloom extends PApplet {
     static final int WIDTH = 1200;
     static final int HEIGHT = 800;
-    static final int NUM_FLOWERS = 15;
+    static final int NUM_FLOWERS = 20;
     
     Grass grass;
     Color[] colors = { new Color(255), new Color(0xff, 0x81, 0x52), new Color(0xf0, 0x42, 0x78),
@@ -30,8 +30,7 @@ public class FlowerBloom extends PApplet {
      * Declare your flower arrays here!
      */
     Daisy[] daisys;
-    Orchid[] orchids;
-    Lilac[] lilacs;
+    
     
     @Override
     public void settings() {
@@ -43,16 +42,12 @@ public class FlowerBloom extends PApplet {
         grass = new Grass(this);
         
         /*
-         * Initialize your flower arrays here!
+         * 1. Initialize your flower arrays here!
          */
         daisys = new Daisy[NUM_FLOWERS];
-        orchids = new Orchid[NUM_FLOWERS];
-        lilacs = new Lilac[NUM_FLOWERS];
         
-        for (int i = 0; i < daisys.length; i++) {
+        for (int i = 0; i < NUM_FLOWERS; i++) {
             daisys[i]  = new Daisy(this, Flower.RANDOM_COLOR);
-            orchids[i] = new Orchid(this, Flower.RANDOM_COLOR);
-            lilacs[i]  = new Lilac(this, Flower.RANDOM_COLOR);
         }
         
         grass.draw();
@@ -67,17 +62,10 @@ public class FlowerBloom extends PApplet {
         /*
          * Iterate through your flower arrays here and draw each one of your flowers here!
          */
-        for( Orchid orchid : orchids ) {
-            orchid.draw();
-        }
-
         for( Daisy daisy : daisys ) {
             daisy.draw();
         }
         
-        for( Lilac lilac : lilacs ) {
-            lilac.draw();
-        }
     }
 
     static public void main(String[] args) {

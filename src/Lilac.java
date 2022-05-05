@@ -13,12 +13,12 @@ public class Lilac extends Flower {
         /*
          * 1. Set the number of petals for your flower using this.numPetals
          */
-        this.numPetals = 8;
+        
         
         /*
          * 2. Set the petal color for your flower using this.petalColor
          */
-        this.petalColor = getColor();
+        
     }
 
     public void draw() {
@@ -37,8 +37,10 @@ public class Lilac extends Flower {
         /*
          * 4. Call SpinFlower() and pass in the spin speed (1 = no spin, 2 = more spin, etc.)
          */
-        spinFlower(1);
 
+        /*
+         * Draw flower -- You don't need to change this!
+         */
         drawPetals(petalLength);
         drawFlowerCenter(flowerCenterRadius);
 
@@ -56,29 +58,21 @@ public class Lilac extends Flower {
         /*
          * 5. Create a for loop that iterates from 0 to the petalLength
          */
-        for (int i = 0; i < petalLength; i += 5) {
             
             /*
              * 6. Call processing.noStroke()
              */
-            processing.noStroke();
             
             /*
              * 7. Call processing.fill(petalColor) if: i > petalLength * 0.1
              *  else: processing.fill(255);
              */
-            if( i > petalLength * 0.1 ) {
-                processing.fill(petalColor);
-            } else {
-                processing.fill(255);
-            }
             
             /*
              * 8. Draw the petal using:
              * processing.ellipse(petalLength - i, 0, 50, petalLength - i);
              */
-            processing.ellipse(petalLength - i, 0, 50, petalLength - i);
-        }
+
     }
 
     void drawFlowerCenter(float flowerCenterRadius) {
