@@ -17,7 +17,7 @@ import processing.core.PApplet;
  * 4. Create your own Flower class and make your own unique field of flowers!
  */
 
-public class FlowerBloom extends PApplet {
+public class SpringBloom extends PApplet {
     static final int WIDTH = 1200;
     static final int HEIGHT = 800;
     static final int NUM_FLOWERS = 20;
@@ -69,6 +69,6 @@ public class FlowerBloom extends PApplet {
     }
 
     static public void main(String[] args) {
-        PApplet.main(FlowerBloom.class.getName());
+        PApplet.main(SpringBloom.class.getName());
     }
 }
