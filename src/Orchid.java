@@ -37,7 +37,7 @@ public class Orchid extends Flower {
         /*
          * Spin flower
          */
-        spinFlower(2);
+        spinFlower(999999);
         
         /*
          * Draw flower

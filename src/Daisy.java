@@ -40,7 +40,7 @@ public class Daisy extends Flower {
          * Spin flower
          */
         processing.ellipseMode(PApplet.CORNER);
-        spinFlower(2);
+        spinFlower(9999999);
         
         /*
          * Petals

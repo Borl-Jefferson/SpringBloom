@@ -30,8 +30,8 @@ public class SpringBloom extends PApplet {
      * Declare your flower arrays here!
      */
     Daisy[] daisys;
-    
-    
+    Lilac[] lilac;
+    Orchid[] orchid;
     @Override
     public void settings() {
         size(WIDTH, HEIGHT);
@@ -45,11 +45,18 @@ public class SpringBloom extends PApplet {
          * 1. Initialize your flower arrays here!
          */
         daisys = new Daisy[NUM_FLOWERS];
+        lilac = new Lilac[NUM_FLOWERS];
+        orchid = new Orchid[NUM_FLOWERS];
         
         for (int i = 0; i < NUM_FLOWERS; i++) {
             daisys[i]  = new Daisy(this, Flower.RANDOM_COLOR);
         }
-        
+        for (int i = 0; i < NUM_FLOWERS; i++) {
+            lilac[i]  = new Lilac(this, Flower.RANDOM_COLOR);
+        }
+        for (int i = 0; i < NUM_FLOWERS; i++) {
+            orchid[i]  = new Orchid(this, Flower.RANDOM_COLOR);
+        }
         grass.draw();
         
         loadPixels();
@@ -62,8 +69,15 @@ public class SpringBloom extends PApplet {
         /*
          * Iterate through your flower arrays here and draw each one of your flowers here!
          */
+        for( Lilac lilac : lilac){	
+        
+        lilac.draw();
+        }
         for( Daisy daisy : daisys ) {
             daisy.draw();
+        }
+        for(Orchid orchid : orchid) {
+        	orchid.draw();
         }
         
     }
